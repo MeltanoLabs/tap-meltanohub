@@ -1,0 +1,283 @@
+{
+        "type": "object",
+        "properties": {
+            "description": {
+                "type": "string"
+            },
+            "domain": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "type"
+                ]
+            },
+            "label": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "singer_name": {
+                "type": "string"
+            },
+            "type": {
+                "type": "string"
+            },
+            "variants": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "default": {
+                            "type": "boolean"
+                        },
+                        "maintenance_status": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "pip_url": {
+                            "type": "string"
+                        },
+                        "repo": {
+                            "type": "string"
+                        },
+                        "settings": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "label": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "kind": {
+                                        "type": "string"
+                                    },
+                                    "documentation": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "anyOf": [
+                                            {
+                                                "type": [
+                                                    "boolean",
+                                                    "integer",
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "AD_PERFORMANCE_REPORT": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "KEYWORDS_PERFORMANCE_REPORT": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "AD_PERFORMANCE_REPORT",
+                                                    "KEYWORDS_PERFORMANCE_REPORT"
+                                                ]
+                                            },
+                                            {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "placeholder": {
+                                        "type": "string"
+                                    },
+                                    "default": {
+                                        "type": [
+                                            "boolean",
+                                            "integer"
+                                        ]
+                                    },
+                                    "options": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "value": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "label",
+                                                "value"
+                                            ]
+                                        }
+                                    },
+                                    "value_post_processor": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        },
+                        "capabilities": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "maintainer": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "label": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "label",
+                                        "url"
+                                    ]
+                                }
+                            ]
+                        },
+                        "metrics": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "num_forks": {
+                                            "type": "integer"
+                                        },
+                                        "num_open_issues": {
+                                            "type": "integer"
+                                        },
+                                        "num_watchers": {
+                                            "type": "integer"
+                                        },
+                                        "num_stargazers": {
+                                            "type": "integer"
+                                        },
+                                        "created_at_timestamp": {
+                                            "type": "string"
+                                        },
+                                        "last_push_timestamp": {
+                                            "type": "string"
+                                        },
+                                        "last_updated_timestamp": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "created_at_timestamp",
+                                        "last_push_timestamp",
+                                        "last_updated_timestamp",
+                                        "num_forks",
+                                        "num_open_issues",
+                                        "num_stargazers",
+                                        "num_watchers"
+                                    ]
+                                }
+                            ]
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "docs": {
+                            "type": "string"
+                        },
+                        "settings_group_validation": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "meltano_sdk": {
+                            "type": "boolean"
+                        },
+                        "language": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "capabilities",
+                        "maintainer",
+                        "maintenance_status",
+                        "metrics",
+                        "name",
+                        "pip_url",
+                        "repo",
+                        "settings",
+                        "url"
+                    ]
+                }
+            },
+            "logo_url": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            },
+            "include": {
+                "type": "string"
+            },
+            "meltano_url": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "description",
+            "domain",
+            "label",
+            "logo_url",
+            "name",
+            "singer_name",
+            "type",
+            "url",
+            "variants"
+        ]
+}
