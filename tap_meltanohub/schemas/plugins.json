@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "pip_url": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "array",
+      "items": {}
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "docs": {
+      "type": "string"
+    },
+    "default": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "plugin_type": {
+      "type": "string"
+    },
+    "settings_group_validation": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "select": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hidden": {
+      "type": "boolean"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "update": {
+      "type": "boolean"
+    },
+    "dialect": {
+      "type": "string"
+    },
+    "target_schema": {
+      "type": "string"
+    },
+    "executable": {
+      "type": "string"
+    },
+    "commands": {
+      "type": "object"
+    },
+    "requires": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "description",
+    "label",
+    "name",
+    "logo_url",
+    "namespace",
+    "variant",
+    "pip_url",
+    "repo",
+    "settings",
+    "capabilities",
+    "docs",
+    "default",
+    "id",
+    "plugin_type"
+  ]
+}

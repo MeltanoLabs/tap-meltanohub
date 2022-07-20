@@ -187,36 +187,36 @@
                                 {
                                     "type": "object",
                                     "properties": {
-                                        "num_forks": {
+                                        "NUM_FORKS": {
                                             "type": "integer"
                                         },
-                                        "num_open_issues": {
+                                        "NUM_OPEN_ISSUES": {
                                             "type": "integer"
                                         },
-                                        "num_watchers": {
+                                        "NUM_WATCHERS": {
                                             "type": "integer"
                                         },
-                                        "num_stargazers": {
+                                        "NUM_STARGAZERS": {
                                             "type": "integer"
                                         },
-                                        "created_at_timestamp": {
+                                        "CREATED_AT_TIMESTAMP": {
                                             "type": "string"
                                         },
-                                        "last_push_timestamp": {
+                                        "LAST_PUSH_TIMESTAMP": {
                                             "type": "string"
                                         },
-                                        "last_updated_timestamp": {
+                                        "LAST_UPDATED_TIMESTAMP": {
                                             "type": "string"
                                         }
                                     },
                                     "required": [
-                                        "created_at_timestamp",
-                                        "last_push_timestamp",
-                                        "last_updated_timestamp",
-                                        "num_forks",
-                                        "num_open_issues",
-                                        "num_stargazers",
-                                        "num_watchers"
+                                        "CREATED_AT_TIMESTAMP",
+                                        "LAST_PUSH_TIMESTAMP",
+                                        "LAST_UPDATED_TIMESTAMP",
+                                        "NUM_FORKS",
+                                        "NUM_OPEN_ISSUES",
+                                        "NUM_STARGAZERS",
+                                        "NUM_WATCHERS"
                                     ]
                                 }
                             ]
@@ -266,6 +266,12 @@
                 "type": "string"
             },
             "meltano_url": {
+                "type": "string"
+            },
+            "entity_type": {
+                "type": "string"
+            },
+            "entity_url": {
                 "type": "string"
             }
         },
