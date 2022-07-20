@@ -71,4 +71,4 @@ jobs:
         meltano install
     - name: Schema test
       run: |
-        meltano run tap-meltanohub target-jsonl
+        meltano --log-level=debug run tap-meltanohub target-jsonl
