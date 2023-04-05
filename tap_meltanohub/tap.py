@@ -2,22 +2,17 @@
 
 from typing import List
 
-from singer_sdk import Tap, Stream
+from singer_sdk import Stream, Tap
 from singer_sdk import typing as th
 
-from tap_meltanohub.streams import (
-        SingerTaps,
-        MeltanoPlugins
-)
+from tap_meltanohub.streams import MeltanoPlugins
 
-STREAM_TYPES = [
-        SingerTaps,
-        MeltanoPlugins
-]
+STREAM_TYPES = [MeltanoPlugins]
 
 
 class TapMeltanoHub(Tap):
     """MeltanoHub tap class."""
+
     name = "tap-meltanohub"
 
     config_jsonschema = th.PropertiesList(
@@ -25,7 +20,7 @@ class TapMeltanoHub(Tap):
             "api_url",
             th.StringType,
             default="https://hub.meltano.com",
-            description="The url for the API service"
+            description="The url for the API service",
         ),
     ).to_dict()
 
