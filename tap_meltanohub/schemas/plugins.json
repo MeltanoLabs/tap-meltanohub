@@ -12,10 +12,7 @@
       "type": "string"
     },
     "logo_url": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "namespace": {
       "type": "string"
@@ -89,22 +86,12 @@
     },
     "requires": {
       "type": "object"
+    },
+    "ext_repo": {
+      "type": "string"
+    },
+    "vars": {
+      "type": "object"
     }
-  },
-  "required": [
-    "description",
-    "label",
-    "name",
-    "logo_url",
-    "namespace",
-    "variant",
-    "pip_url",
-    "repo",
-    "settings",
-    "capabilities",
-    "docs",
-    "default",
-    "id",
-    "plugin_type"
-  ]
+  }
 }
