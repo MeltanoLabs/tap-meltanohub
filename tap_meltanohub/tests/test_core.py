@@ -2,25 +2,15 @@
 
 import datetime
 
-from singer_sdk.testing import get_standard_tap_tests
+from singer_sdk.testing import SuiteConfig, get_tap_test_class
 
 from tap_meltanohub.tap import TapMeltanoHub
 
-SAMPLE_CONFIG = {
-    "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
-    # TODO: Initialize minimal tap config
-}
+SAMPLE_CONFIG = {"start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")}
 
 
-# Run standard built-in tap tests from the SDK:
-def test_standard_tap_tests():
-    """Run standard tap tests from the SDK."""
-    tests = get_standard_tap_tests(
-        TapMeltanoHub,
-        config=SAMPLE_CONFIG
-    )
-    for test in tests:
-        test()
-
-
-# TODO: Create additional tests as appropriate for your tap.
+TestTapMeltanoHub = get_tap_test_class(
+    TapMeltanoHub,
+    config=SAMPLE_CONFIG,
+    suite_config=SuiteConfig(max_records_limit=20),
+)
