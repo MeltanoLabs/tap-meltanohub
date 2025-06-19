@@ -7,7 +7,8 @@ Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 ## Installation
 
 ```bash
-pipx install tap-meltanohub
+curl -LsSf https://astral.sh/uv/install.sh | sh  # or see https://docs.astral.sh/uv/getting-started/installation/
+uv tool install git+https://github.com/MeltanoLabs/tap-meltanohub.git
 ```
 
 ## Configuration
@@ -40,8 +41,7 @@ tap-meltanohub --config CONFIG --discover > ./catalog.json
 ### Initialize your Development Environment
 
 ```bash
-pipx install poetry
-poetry install
+uv sync
 ```
 
 ### Create and Run Tests
@@ -50,13 +50,13 @@ Create tests within the `tap_meltanohub/tests` subfolder and
   then run:
 
 ```bash
-poetry run pytest
+uv run pytest
 ```
 
-You can also test the `tap-meltanohub` CLI interface directly using `poetry run`:
+You can also test the `tap-meltanohub` CLI interface directly using `uv run`:
 
 ```bash
-poetry run tap-meltanohub --help
+uv run tap-meltanohub --help
 ```
 
 ### Testing with [Meltano](https://www.meltano.com)
@@ -71,7 +71,7 @@ Next, install Meltano (if you haven't already) and any needed plugins:
 
 ```bash
 # Install meltano
-pipx install meltano
+uv tool install meltano
 # Initialize meltano within this directory
 cd tap-meltanohub
 meltano install
@@ -82,8 +82,8 @@ Now you can test and orchestrate using Meltano:
 ```bash
 # Test invocation:
 meltano invoke tap-meltanohub --version
-# OR run a test `elt` pipeline:
-meltano elt tap-meltanohub target-jsonl
+# OR run a test EL pipeline:
+meltano run tap-meltanohub target-jsonl
 ```
 
 ### SDK Dev Guide
