@@ -1,6 +1,11 @@
 version: 1
 send_anonymous_usage_stats: true
 project_id: 0591c8ba-cb1d-40b9-b394-34ac760ebc90
+default_environment: dev
+environments:
+- name: dev
+venv:
+  backend: uv
 plugins:
   extractors:
   - name: tap-meltanohub

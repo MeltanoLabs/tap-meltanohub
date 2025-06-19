@@ -1,10 +1,11 @@
 """Stream type classes for tap-meltanohub."""
 
-from pathlib import Path
+import importlib.resources
 
 from tap_meltanohub.client import MeltanoStream
+from tap_meltanohub import schemas
 
-SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
+SCHEMAS_DIR = importlib.resources.files(schemas)
 
 
 class MeltanoPlugins(MeltanoStream):
